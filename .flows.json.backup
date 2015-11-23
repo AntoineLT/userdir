@@ -84,7 +84,7 @@
         "id": "b42a9981.eff79",
         "type": "function",
         "name": "",
-        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\nmsg.obj = JSON.parse(msg.payload);\nreturn msg;",
+        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\n//msg.obj = JSON.parse(msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 470,
