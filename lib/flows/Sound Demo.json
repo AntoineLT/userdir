@@ -1,0 +1,300 @@
+[
+    {
+        "id": "e3dc23bd.3564d8",
+        "type": "go",
+        "name": "",
+        "x": 175,
+        "y": 104,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "fd71d214.a00848"
+            ]
+        ]
+    },
+    {
+        "id": "fce32704.c5c468",
+        "type": "commentdown",
+        "name": "Clic below to start or stop the music",
+        "info": "\n",
+        "x": 233,
+        "y": 69,
+        "z": "5ce764ae.c4a8c4",
+        "wires": []
+    },
+    {
+        "id": "6fc1d910.e42998",
+        "type": "sound",
+        "name": "Swing KISSJazz",
+        "sound": "http://listen.radionomy.com/KISSJazz",
+        "x": 542,
+        "y": 124,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "c3db5caa.6d2df8"
+            ],
+            [
+                "4e9f1377.d48c64"
+            ]
+        ]
+    },
+    {
+        "id": "575531dc.4280f8",
+        "type": "go",
+        "name": "",
+        "x": 175,
+        "y": 164,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "647d202a.349e5"
+            ]
+        ]
+    },
+    {
+        "id": "c3db5caa.6d2df8",
+        "type": "display",
+        "active": true,
+        "x": 715.5,
+        "y": 84,
+        "z": "5ce764ae.c4a8c4",
+        "wires": []
+    },
+    {
+        "id": "4e9f1377.d48c64",
+        "type": "display",
+        "active": true,
+        "x": 715.5,
+        "y": 144,
+        "z": "5ce764ae.c4a8c4",
+        "wires": []
+    },
+    {
+        "id": "34c9491e.c6360e",
+        "type": "sound",
+        "name": "Salsa",
+        "sound": "http://listen.radionomy.com/salsamorco",
+        "x": 539,
+        "y": 214,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4fc4bf14.149f8",
+        "type": "sound",
+        "name": "",
+        "sound": "",
+        "x": 710,
+        "y": 460,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "c3db5caa.6d2df8"
+            ],
+            [
+                "4e9f1377.d48c64"
+            ]
+        ]
+    },
+    {
+        "id": "141daff3.2a61c",
+        "type": "go",
+        "name": "",
+        "x": 173,
+        "y": 435,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "55e70499.ddde84"
+            ]
+        ]
+    },
+    {
+        "id": "b9ebba8e.21f8c",
+        "type": "go",
+        "name": "",
+        "x": 173,
+        "y": 475,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "fe516c91.9ab7f8"
+            ]
+        ]
+    },
+    {
+        "id": "fd71d214.a00848",
+        "type": "Open",
+        "x": 335,
+        "y": 104,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "6fc1d910.e42998"
+            ]
+        ]
+    },
+    {
+        "id": "647d202a.349e5",
+        "type": "Close",
+        "x": 335.5,
+        "y": 164,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "6fc1d910.e42998"
+            ]
+        ]
+    },
+    {
+        "id": "7ba2cb69.f5bf64",
+        "type": "comment",
+        "name": "This flow shows how the music can be calculated",
+        "info": "\n",
+        "x": 282,
+        "y": 388,
+        "z": "5ce764ae.c4a8c4",
+        "wires": []
+    },
+    {
+        "id": "80c4b4b0.8463d8",
+        "type": "comment",
+        "name": "Change the music!",
+        "info": "\n",
+        "x": 573.5,
+        "y": 254,
+        "z": "5ce764ae.c4a8c4",
+        "wires": []
+    },
+    {
+        "id": "e0fad972.46d758",
+        "type": "go",
+        "name": "",
+        "x": 178,
+        "y": 539,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "a6eeca44.ed5e5"
+            ]
+        ]
+    },
+    {
+        "id": "2eac322c.87ff2e",
+        "type": "Open",
+        "x": 550,
+        "y": 460,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "4fc4bf14.149f8"
+            ]
+        ]
+    },
+    {
+        "id": "a6eeca44.ed5e5",
+        "type": "Close",
+        "x": 358.5,
+        "y": 539,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "2eac322c.87ff2e"
+            ]
+        ]
+    },
+    {
+        "id": "71205a0.bce14a8",
+        "type": "intensity",
+        "property": "intensity",
+        "name": "Low",
+        "min": 0,
+        "max": 100,
+        "val": "38",
+        "x": 378,
+        "y": 224,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "6fc1d910.e42998"
+            ]
+        ]
+    },
+    {
+        "id": "49fcf1.6da69b1",
+        "type": "go",
+        "name": "",
+        "x": 255,
+        "y": 224,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "71205a0.bce14a8"
+            ]
+        ]
+    },
+    {
+        "id": "f3a52e81.caa4f",
+        "type": "intensity",
+        "property": "intensity",
+        "name": "high",
+        "min": 0,
+        "max": 100,
+        "val": "100",
+        "x": 378,
+        "y": 264,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "6fc1d910.e42998"
+            ]
+        ]
+    },
+    {
+        "id": "e098d8fc.c9751",
+        "type": "go",
+        "name": "",
+        "x": 255,
+        "y": 264,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "f3a52e81.caa4f"
+            ]
+        ]
+    },
+    {
+        "id": "55e70499.ddde84",
+        "type": "set",
+        "property": "payload",
+        "value": "http://listen.radionomy.com/salsamorco",
+        "name": "Salsa",
+        "x": 353,
+        "y": 435,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "2eac322c.87ff2e"
+            ]
+        ]
+    },
+    {
+        "id": "fe516c91.9ab7f8",
+        "type": "set",
+        "property": "payload",
+        "value": "http://listen.radionomy.com/KISSJazz",
+        "name": "Jazz",
+        "x": 359.5,
+        "y": 475,
+        "z": "5ce764ae.c4a8c4",
+        "wires": [
+            [
+                "2eac322c.87ff2e"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,155 @@
+[
+    {
+        "id": "fece47e8.7fbf9",
+        "type": "mqtt-broker",
+        "broker": "api.timesquair.io",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
+        "id": "90a2ff6f.2ce7d8",
+        "type": "e-mail",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "name": "",
+        "dname": "TESSA",
+        "x": 691,
+        "y": 480,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "ef009e03.436ca",
+        "type": "inject",
+        "name": "Mail snapshot",
+        "topic": "",
+        "payload": "",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 288.5,
+        "y": 480,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "a9e46d01.e8b92"
+            ]
+        ]
+    },
+    {
+        "id": "a9e46d01.e8b92",
+        "type": "function",
+        "name": "",
+        "func": "\nmsg.payload = \"Ceci est le contenu de mon mail.\" ;\nmsg.topic = \"Bonjour de TSA\" ;\nmsg.to = \"franck.lefevre@digitalairways.com\" ;\n//msg.to = \"paul.renault@digitalairways.com\" ;\n//msg.to = \"nicolas.silberzahn@digitalairways.com\" ;\nmsg.to = \"745azu34adzis@hpeprint.com\" ;\n//msg.filename. Optionally msg.description can be added for the body text.\n// msg.attachments\nmsg.attachments = [\n        {   // Picture file as attachement \n            filename: 'snapshot.png',\n\t\t\tpath: '/tmp/snap.png' // stream this file \n        }\n    ] ;\n\nreturn msg;",
+        "outputs": 1,
+        "x": 510,
+        "y": 480,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "90a2ff6f.2ce7d8"
+            ]
+        ]
+    },
+    {
+        "id": "7fd265b.98e6b1c",
+        "type": "inject",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 270,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "6a428a49.817b84"
+            ]
+        ]
+    },
+    {
+        "id": "6a428a49.817b84",
+        "type": "exec",
+        "command": "sudo -u vlc cvlc http://192.168.0.166/img/video.mjpeg --rate=1 --video-filter=scene --vout=dummy --aout=dummy --scene-format=png --scene-ratio=24 --scene-prefix=snap --scene-path=/tmp --scene-width=640 --scene-replace vlc://quit",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "name": "Recorder",
+        "x": 518,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a3dcedc8.38556",
+        "type": "inject",
+        "name": "Stop",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 270,
+        "y": 540,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "8e7b4621.a92df8"
+            ]
+        ]
+    },
+    {
+        "id": "8e7b4621.a92df8",
+        "type": "exec",
+        "command": "killall vlc",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "name": "Recorder",
+        "x": 518,
+        "y": 540,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "93bef48a.e6d9c8",
+        "type": "mqtt in",
+        "name": "",
+        "topic": "snapshot",
+        "broker": "fece47e8.7fbf9",
+        "x": 254,
+        "y": 440,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "1bf3864b.3ce0b2",
+                "a9e46d01.e8b92"
+            ]
+        ]
+    },
+    {
+        "id": "1bf3864b.3ce0b2",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 528.5,
+        "y": 440,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    }
+]
