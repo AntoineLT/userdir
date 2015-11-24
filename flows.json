@@ -107,5 +107,77 @@
         "y": 380,
         "z": "c3aed0d3.3ce58",
         "wires": []
+    },
+    {
+        "id": "a0d55ea2.2aeb38",
+        "type": "go",
+        "name": "",
+        "x": 170,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "381b0243.1e67de"
+            ]
+        ]
+    },
+    {
+        "id": "381b0243.1e67de",
+        "type": "exec",
+        "command": "cd /root/userdir; git ls-remote --exit-code other",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "cd /root/userdir; git ls-remote --exit-code github",
+        "x": 436.5,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "17beb4ff.a26053"
+            ],
+            [
+                "a1ac769f.ac0e68"
+            ],
+            [
+                "6e9dc3f.548803c"
+            ]
+        ]
+    },
+    {
+        "id": "17beb4ff.a26053",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 460,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "a1ac769f.ac0e68",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "6e9dc3f.548803c",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 540,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
     }
 ]
