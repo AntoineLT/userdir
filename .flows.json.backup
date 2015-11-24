@@ -84,7 +84,7 @@
         "id": "b42a9981.eff79",
         "type": "function",
         "name": "",
-        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\n//msg.obj = JSON.parse(msg.payload);\nreturn msg;",
+        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 470,
@@ -92,8 +92,7 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "d50cef33.07e648",
-                "52132564.fab644"
+                "d50cef33.07e648"
             ]
         ]
     },
@@ -106,18 +105,6 @@
         "complete": "false",
         "x": 688.5,
         "y": 380,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "52132564.fab644",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "obj",
-        "x": 688.5,
-        "y": 420,
         "z": "c3aed0d3.3ce58",
         "wires": []
     }
