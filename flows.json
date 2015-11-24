@@ -124,7 +124,7 @@
     {
         "id": "381b0243.1e67de",
         "type": "exec",
-        "command": "cd /root/userdir; git ls-remote --exit-code other",
+        "command": "cd /root/userdir; git ls-remote --exit-code github",
         "addpay": false,
         "append": "",
         "useSpawn": "",
