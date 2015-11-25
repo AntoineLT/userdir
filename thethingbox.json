@@ -1,1 +1,1 @@
-{"id":"d21ebbbc-33a8-4299-8e3e-3f66abc477b6","rsa":{"server":{"publicKey":"/root/certs/serv.pub"},"publicKey":"/root/certs/my-ttb.pub","privateKey":"/root/certs/my-ttb.key.pem"},"showall":true,"email":"antoine.latorre@digitalairways.com","account_id":48,"gitssh":false}
+{"id":"d21ebbbc-33a8-4299-8e3e-3f66abc477b6","rsa":{"server":{"publicKey":"/root/certs/serv.pub"},"publicKey":"/root/certs/my-ttb.pub","privateKey":"/root/certs/my-ttb.key.pem"},"showall":true,"email":"antoine.latorre@digitalairways.com","account_id":48,"gitssh":true}
