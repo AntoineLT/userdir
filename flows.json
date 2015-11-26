@@ -251,5 +251,40 @@
                 "ebcf38a3.6bde48"
             ]
         ]
+    },
+    {
+        "id": "331bc913.52580e",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 177,
+        "y": 320,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "8c6ad612.0a64b"
+            ]
+        ]
+    },
+    {
+        "id": "8c6ad612.0a64b",
+        "type": "function",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 320,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "1483f35e.717c5d"
+            ]
+        ]
     }
 ]
