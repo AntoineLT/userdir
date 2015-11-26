@@ -1,0 +1,255 @@
+[
+    {
+        "type": "tab",
+        "id": "c3aed0d3.3ce58",
+        "label": "Flow"
+    },
+    {
+        "id": "MQTT.Localhost",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
+        "id": "ff302644.dfde2",
+        "type": "mqtt-broker",
+        "broker": "systm",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
+        "id": "339c286a.a5f248",
+        "type": "go",
+        "name": "",
+        "x": 154,
+        "y": 108,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "91e81f96.ce0568"
+            ]
+        ]
+    },
+    {
+        "id": "91e81f96.ce0568",
+        "type": "set",
+        "property": "payload",
+        "value": "Hello world!",
+        "name": "",
+        "x": 316,
+        "y": 170,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "1483f35e.717c5d"
+            ]
+        ]
+    },
+    {
+        "id": "1483f35e.717c5d",
+        "type": "display",
+        "active": true,
+        "x": 495,
+        "y": 233,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "97d51a50.1542d8",
+        "type": "commentdown",
+        "name": "Clic below and look the result into the display tab",
+        "info": "",
+        "x": 257,
+        "y": 69,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "134c0b66.c65b5d",
+        "type": "mqtt in",
+        "name": "",
+        "topic": "68193f100114/temperature/1",
+        "broker": "ff302644.dfde2",
+        "x": 217,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "b42a9981.eff79"
+            ]
+        ]
+    },
+    {
+        "id": "b42a9981.eff79",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "d50cef33.07e648"
+            ]
+        ]
+    },
+    {
+        "id": "d50cef33.07e648",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 688.5,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "a0d55ea2.2aeb38",
+        "type": "go",
+        "name": "",
+        "x": 170,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "381b0243.1e67de"
+            ]
+        ]
+    },
+    {
+        "id": "381b0243.1e67de",
+        "type": "exec",
+        "command": "cd /root/userdir; git remote",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "cd /root/userdir; git ls-remote --exit-code github",
+        "x": 436.5,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "17beb4ff.a26053"
+            ],
+            [
+                "a1ac769f.ac0e68"
+            ],
+            [
+                "6e9dc3f.548803c"
+            ]
+        ]
+    },
+    {
+        "id": "17beb4ff.a26053",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 460,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "a1ac769f.ac0e68",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 500,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "6e9dc3f.548803c",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 748.5,
+        "y": 540,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "ebcf38a3.6bde48",
+        "type": "exec",
+        "command": "env",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "name": "",
+        "x": 310,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "d5d9d59a.b2dbf8"
+            ],
+            [
+                "6fcfbd4e.032364"
+            ],
+            [
+                "e6dc33e2.eea0d"
+            ]
+        ]
+    },
+    {
+        "id": "d5d9d59a.b2dbf8",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 560,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "6fcfbd4e.032364",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "e6dc33e2.eea0d",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 640,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "2b6ed767.be63f",
+        "type": "go",
+        "name": "",
+        "x": 170,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "ebcf38a3.6bde48"
+            ]
+        ]
+    }
+]

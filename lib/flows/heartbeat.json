@@ -1,0 +1,73 @@
+    {
+        "id": "32200692.2d8302",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "x": 117,
+        "y": 4080,
+        "z": "system",
+        "wires": [
+            [
+                "316bcc41.3fbc1c"
+            ]
+        ]
+    },
+    {
+        "id": "316bcc41.3fbc1c",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = JSON.stringify({\n    \"url\": \"http://mythingbox.io/api/V2/heartbeat\",\n    \"payload\": {\n        \"date\": \"hello\"\n    },\n    \"dontdecrypt\":\"true\"\n});\nmsg.url    = \"http:///api/cloud\";\nmsg.method = \"POST\";\nmsg.headers = {};\nmsg.headers['content-type'] = \"application/json\";\nmsg.headers['content-length'] = Buffer.byteLength(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 4080,
+        "z": "system",
+        "wires": [
+            [
+                "3d3f60c9.896"
+            ]
+        ]
+    },
+    {
+        "id": "3d3f60c9.896",
+        "type": "http request",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "url": "",
+        "x": 426.5,
+        "y": 4080,
+        "z": "system",
+        "wires": [
+            [
+                "c17a59a6.96c558"
+            ]
+        ]
+    },
+    {
+        "id": "c17a59a6.96c558",
+        "type": "debug",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 590,
+        "y": 4080,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "f88be6f8.4d688",
+        "type": "commentdown",
+        "name": "HeartBeat",
+        "info": "",
+        "x": 96.5,
+        "y": 4040,
+        "z": "system",
+        "wires": []
+    }

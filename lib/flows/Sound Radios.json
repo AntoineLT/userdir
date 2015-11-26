@@ -1,0 +1,249 @@
+[
+    {
+        "id": "a1c829e2.7e84d",
+        "type": "sound",
+        "name": "Salsa",
+        "sound": "http://listen.radionomy.com/salsamorco",
+        "x": 110,
+        "y": 60,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d02f72e5.ed4f98",
+        "type": "sound",
+        "name": "Classical",
+        "sound": "http://listen.radionomy.com/MozartRadio",
+        "x": 116.5,
+        "y": 100,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "64970950.ab35f8",
+        "type": "sound",
+        "name": "best-of-slow",
+        "sound": "http://listen.radionomy.com/best-of-slow",
+        "x": 126.5,
+        "y": 140,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "59d848ed.0c3188",
+        "type": "sound",
+        "name": "Classical 2",
+        "sound": "http://listen.radionomy.com/made-in-classic",
+        "x": 122.5,
+        "y": 180,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5dbf6ce3.54c5f4",
+        "type": "sound",
+        "name": "Opera",
+        "sound": "http://listen.radionomy.com/ABC-Opera",
+        "x": 110,
+        "y": 220,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "15544ee9.cd1a51",
+        "type": "sound",
+        "name": "Alternative",
+        "sound": "http://listen.radionomy.com/AdultAlternative",
+        "x": 122,
+        "y": 260,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6467d3e0.fe9bac",
+        "type": "sound",
+        "name": "UK Rock",
+        "sound": "http://listen.radionomy.com:80/UKRockRadio",
+        "x": 115.5,
+        "y": 300,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "955368cc.68ffa",
+        "type": "sound",
+        "name": "1980's",
+        "sound": "http://listen.radionomy.com/80-sUnlimited",
+        "x": 110,
+        "y": 340,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4c409a13.7755f4",
+        "type": "sound",
+        "name": "Grunge",
+        "sound": "http://listen.radionomy.com/Grunge90",
+        "x": 112.5,
+        "y": 380,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "620555cd.925ddc",
+        "type": "sound",
+        "name": "Hardcore",
+        "sound": "http://listen.radionomy.com/Absolute-Hardstyle-Radio",
+        "x": 297.5,
+        "y": 60,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f83dab60.86372",
+        "type": "sound",
+        "name": "Indie Rock - LoNdOn BuRnInG",
+        "sound": "http://192.99.4.210:3800/stream",
+        "x": 364.5,
+        "y": 100,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "197e7b7a.0ef5d5",
+        "type": "sound",
+        "name": "Reggae jamaican",
+        "sound": "http://listen.radionomy.com/only-reggae",
+        "x": 323.5,
+        "y": 140,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "182d51d0.e47dd6",
+        "type": "sound",
+        "name": "Dance",
+        "sound": "http://listen.radionomy.com:80/MusicOne",
+        "x": 290,
+        "y": 180,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a964676f.1a1a68",
+        "type": "sound",
+        "name": "Hip-Hop",
+        "sound": "http://listen.radionomy.com/One-love-Hip-Hop-Radio",
+        "x": 293.5,
+        "y": 220,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "827e8fed.c103a8",
+        "type": "sound",
+        "name": "Garage Rock",
+        "sound": "http://listen.radionomy.com:80/Musikando",
+        "x": 310.5,
+        "y": 260,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f64a26f8.d6af08",
+        "type": "sound",
+        "name": "Rockabilly",
+        "sound": "http://listen.radionomy.com/Rockabilly",
+        "x": 300.5,
+        "y": 300,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1b6be60b.69766a",
+        "type": "sound",
+        "name": "Roots Of Rock",
+        "sound": "http://listen.streamonomy.com/rootsofrock",
+        "x": 314.5,
+        "y": 340,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c0b851b.fa127a",
+        "type": "sound",
+        "name": "Surf",
+        "sound": "http://206.190.136.141:4470/SurfShackRadio",
+        "x": 290,
+        "y": 380,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c0965bbd.29d7f8",
+        "type": "sound",
+        "name": "jazz-swing-manouche",
+        "sound": "http://listen.radionomy.com/jazz-swing-manouche-radio",
+        "x": 490,
+        "y": 180,
+        "z": "acd6c94b.a05ac",
+        "wires": [
+            [],
+            []
+        ]
+    }
+]
