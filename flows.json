@@ -35,7 +35,7 @@
         "id": "91e81f96.ce0568",
         "type": "set",
         "property": "payload",
-        "value": "Hello!",
+        "value": "Hello world!",
         "name": "",
         "x": 316,
         "y": 170,
