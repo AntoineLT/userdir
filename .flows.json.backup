@@ -251,5 +251,39 @@
                 "ebcf38a3.6bde48"
             ]
         ]
+    },
+    {
+        "id": "34ca2395.368b5c",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 905,
+        "y": 143,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22211cf4.884c84",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 725,
+        "y": 83,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            []
+        ]
     }
 ]
