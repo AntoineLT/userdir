@@ -49,18 +49,6 @@
      "module": "node-red",
      "file": "/root/thethingbox/node_modules/node-red/nodes/core/core/75-exec.js"
     },
-<<<<<<< HEAD
-=======
-    "function": {
-     "name": "function",
-     "types": [
-      "function"
-     ],
-     "enabled": true,
-     "module": "node-red",
-     "file": "/root/thethingbox/node_modules/node-red/nodes/core/core/80-function.js"
-    },
->>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
     "template": {
      "name": "template",
      "types": [
@@ -265,6 +253,36 @@
     }
    }
   },
+  "ttb-node-owntracks": {
+   "name": "ttb-node-owntracks",
+   "version": "0.0.4",
+   "nodes": {
+    "owntracks": {
+     "name": "owntracks",
+     "types": [
+      "owntracks"
+     ],
+     "enabled": true,
+     "module": "ttb-node-owntracks",
+     "file": "/root/userdir/node_modules/ttb-node-owntracks/owntracks.js"
+    }
+   }
+  },
+  "node-red-contrib-splitter": {
+   "name": "node-red-contrib-splitter",
+   "version": "0.0.16",
+   "nodes": {
+    "splitter": {
+     "name": "splitter",
+     "types": [
+      "splitter"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-splitter",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/node-red-contrib-splitter/splitter.js"
+    }
+   }
+  },
   "node-red-node-email": {
    "name": "node-red-node-email",
    "version": "0.1.0",
@@ -345,18 +363,18 @@
     }
    }
   },
-  "node-red-contrib-splitter": {
-   "name": "node-red-contrib-splitter",
-   "version": "0.0.16",
+  "volume": {
+   "name": "volume",
+   "version": "1.0.0",
    "nodes": {
-    "splitter": {
-     "name": "splitter",
+    "volume": {
+     "name": "volume",
      "types": [
-      "splitter"
+      "volume"
      ],
      "enabled": true,
-     "module": "node-red-contrib-splitter",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/node-red-contrib-splitter/splitter.js"
+     "module": "volume",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-Volume/43-volume.js"
     }
    }
   },
@@ -372,6 +390,21 @@
      "enabled": true,
      "module": "ttb-node-carriots",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-carriots/carriots.js"
+    }
+   }
+  },
+  "ttb-node-city": {
+   "name": "ttb-node-city",
+   "version": "0.0.1",
+   "nodes": {
+    "city": {
+     "name": "city",
+     "types": [
+      "city"
+     ],
+     "enabled": true,
+     "module": "ttb-node-city",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-city/city.js"
     }
    }
   },
@@ -394,6 +427,15 @@
    "name": "ttb-node-comments",
    "version": "0.0.1",
    "nodes": {
+    "info": {
+     "name": "info",
+     "types": [
+      "info"
+     ],
+     "enabled": true,
+     "module": "ttb-node-comments",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/ttb-info.js"
+    },
     "commentdown": {
      "name": "commentdown",
      "types": [
@@ -411,15 +453,6 @@
      "enabled": true,
      "module": "ttb-node-comments",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/commentup.js"
-    },
-    "info": {
-     "name": "info",
-     "types": [
-      "info"
-     ],
-     "enabled": true,
-     "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/ttb-info.js"
     }
    }
   },
@@ -450,6 +483,21 @@
      "enabled": true,
      "module": "ttb-node-currentwifi",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-currentwifi/currentwifi.js"
+    }
+   }
+  },
+  "dateformat": {
+   "name": "dateformat",
+   "version": "0.0.0",
+   "nodes": {
+    "dateformat": {
+     "name": "dateformat",
+     "types": [
+      "dateformat"
+     ],
+     "enabled": true,
+     "module": "dateformat",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-dateformat/dateformat.js"
     }
    }
   },
@@ -558,6 +606,21 @@
     }
    }
   },
+  "factorynode": {
+   "name": "factorynode",
+   "version": "0.0.0",
+   "nodes": {
+    "factorynode": {
+     "name": "factorynode",
+     "types": [
+      "nodefactory"
+     ],
+     "enabled": true,
+     "module": "factorynode",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-factorynode/factorynode.js"
+    }
+   }
+  },
   "ttb-node-file-ejs": {
    "name": "ttb-node-file-ejs",
    "version": "0.0.1",
@@ -585,6 +648,21 @@
      "enabled": true,
      "module": "ttb-node-file-function",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-file-function/file-function.js"
+    }
+   }
+  },
+  "ttb-node-function": {
+   "name": "ttb-node-function",
+   "version": "0.0.1",
+   "nodes": {
+    "function": {
+     "name": "function",
+     "types": [
+      "function"
+     ],
+     "enabled": true,
+     "module": "ttb-node-function",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-function/80-function.js"
     }
    }
   },
@@ -702,6 +780,21 @@
     }
    }
   },
+  "ttb-node-meteo": {
+   "name": "ttb-node-meteo",
+   "version": "0.0.1",
+   "nodes": {
+    "meteo": {
+     "name": "meteo",
+     "types": [
+      "meteo"
+     ],
+     "enabled": true,
+     "module": "ttb-node-meteo",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-meteo/meteo.js"
+    }
+   }
+  },
   "ttb-node-restore-flow": {
    "name": "ttb-node-restore-flow",
    "version": "1.0.0",
@@ -729,6 +822,21 @@
      "enabled": true,
      "module": "ttb-node-set",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-set/set.js"
+    }
+   }
+  },
+  "sound": {
+   "name": "sound",
+   "version": "1.0.0",
+   "nodes": {
+    "sound": {
+     "name": "sound",
+     "types": [
+      "sound"
+     ],
+     "enabled": true,
+     "module": "sound",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-sound/42-sound.js"
     }
    }
   },
@@ -777,6 +885,21 @@
     }
    }
   },
+  "ttb-node-ubidots": {
+   "name": "ttb-node-ubidots",
+   "version": "0.0.1",
+   "nodes": {
+    "ubidots": {
+     "name": "ubidots",
+     "types": [
+      "ubidots"
+     ],
+     "enabled": true,
+     "module": "ttb-node-ubidots",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-ubidots/ubidots.js"
+    }
+   }
+  },
   "ttb-node-wifilist": {
    "name": "ttb-node-wifilist",
    "version": "0.0.1",
@@ -822,93 +945,18 @@
     }
    }
   },
-  "volume": {
-   "name": "volume",
-   "version": "1.0.0",
-   "nodes": {
-    "volume": {
-     "name": "volume",
-     "types": [
-      "volume"
-     ],
-     "enabled": true,
-     "module": "volume",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-Volume/43-volume.js"
-    }
-   }
-  },
-  "factorynode": {
-   "name": "factorynode",
+  "zip": {
+   "name": "zip",
    "version": "0.0.0",
    "nodes": {
-    "factorynode": {
-     "name": "factorynode",
+    "zip": {
+     "name": "zip",
      "types": [
-      "nodefactory"
+      "unzip"
      ],
      "enabled": true,
-     "module": "factorynode",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-factorynode/factorynode.js"
-    }
-   }
-  },
-  "sound": {
-   "name": "sound",
-   "version": "1.0.0",
-   "nodes": {
-    "sound": {
-     "name": "sound",
-     "types": [
-      "sound"
-     ],
-     "enabled": true,
-     "module": "sound",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-sound/42-sound.js"
-    }
-   }
-  },
-  "ttb-node-city": {
-   "name": "ttb-node-city",
-   "version": "0.0.1",
-   "nodes": {
-    "city": {
-     "name": "city",
-     "types": [
-      "city"
-     ],
-     "enabled": true,
-     "module": "ttb-node-city",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-city/city.js"
-    }
-   }
-  },
-  "dateformat": {
-   "name": "dateformat",
-   "version": "0.0.0",
-   "nodes": {
-    "dateformat": {
-     "name": "dateformat",
-     "types": [
-      "dateformat"
-     ],
-     "enabled": true,
-     "module": "dateformat",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-dateformat/dateformat.js"
-    }
-   }
-  },
-  "ttb-node-meteo": {
-   "name": "ttb-node-meteo",
-   "version": "0.0.1",
-   "nodes": {
-    "meteo": {
-     "name": "meteo",
-     "types": [
-      "meteo"
-     ],
-     "enabled": true,
-     "module": "ttb-node-meteo",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-meteo/meteo.js"
+     "module": "zip",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-zip/61-zip.js"
     }
    }
   },
@@ -926,69 +974,6 @@
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-npm/npm.js"
     }
    }
-  },
-  "zip": {
-   "name": "zip",
-   "version": "0.0.0",
-   "nodes": {
-    "zip": {
-     "name": "zip",
-     "types": [
-      "unzip"
-     ],
-     "enabled": true,
-     "module": "zip",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-zip/61-zip.js"
-    }
-   }
-  },
-  "ttb-node-ubidots": {
-   "name": "ttb-node-ubidots",
-   "version": "0.0.1",
-   "nodes": {
-    "ubidots": {
-     "name": "ubidots",
-     "types": [
-      "ubidots"
-     ],
-     "enabled": true,
-     "module": "ttb-node-ubidots",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-ubidots/ubidots.js"
-    }
-   }
-<<<<<<< HEAD
-  },
-  "ttb-node-function": {
-   "name": "ttb-node-function",
-   "version": "0.0.1",
-   "nodes": {
-    "function": {
-     "name": "function",
-     "types": [
-      "function"
-     ],
-     "enabled": true,
-     "module": "ttb-node-function",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-function/80-function.js"
-    }
-   }
-  },
-  "ttb-node-owntracks": {
-   "name": "ttb-node-owntracks",
-   "version": "0.0.4",
-   "nodes": {
-    "owntracks": {
-     "name": "owntracks",
-     "types": [
-      "owntracks"
-     ],
-     "enabled": true,
-     "module": "ttb-node-owntracks",
-     "file": "/root/userdir/node_modules/ttb-node-owntracks/owntracks.js"
-    }
-   }
-=======
->>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
   }
  }
 }

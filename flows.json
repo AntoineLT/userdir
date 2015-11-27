@@ -5,14 +5,11 @@
         "label": "Flow"
     },
     {
-<<<<<<< HEAD
         "type": "tab",
         "id": "9466d32b.ee9b18",
         "label": "Flow 2"
     },
     {
-=======
->>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
         "id": "MQTT.Localhost",
         "type": "mqtt-broker",
         "broker": "localhost",
@@ -40,24 +37,6 @@
         ]
     },
     {
-<<<<<<< HEAD
-=======
-        "id": "91e81f96.ce0568",
-        "type": "set",
-        "property": "payload",
-        "value": "Hello world!",
-        "name": "",
-        "x": 316,
-        "y": 170,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "1483f35e.717c5d"
-            ]
-        ]
-    },
-    {
->>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
         "id": "1483f35e.717c5d",
         "type": "display",
         "active": true,
@@ -262,7 +241,6 @@
                 "ebcf38a3.6bde48"
             ]
         ]
-<<<<<<< HEAD
     },
     {
         "id": "91e81f96.ce0568",
@@ -325,7 +303,5 @@
         "y": 160,
         "z": "9466d32b.ee9b18",
         "wires": []
-=======
->>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
     }
 ]
