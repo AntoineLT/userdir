@@ -251,34 +251,5 @@
                 "ebcf38a3.6bde48"
             ]
         ]
-    },
-    {
-        "id": "26d36389.fe89bc",
-        "type": "info",
-        "name": "",
-        "info": "",
-        "icon": "comment.png",
-        "langs": [
-            {
-                "key": "en-US",
-                "title": "",
-                "body": "",
-                "isDefault": true
-            }
-        ],
-        "x": 770,
-        "y": 40,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "a9142e1b.372748",
-        "type": "comment",
-        "name": "",
-        "info": "",
-        "x": 950,
-        "y": 40,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
     }
 ]
