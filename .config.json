@@ -49,6 +49,18 @@
      "module": "node-red",
      "file": "/root/thethingbox/node_modules/node-red/nodes/core/core/75-exec.js"
     },
+<<<<<<< HEAD
+=======
+    "function": {
+     "name": "function",
+     "types": [
+      "function"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "/root/thethingbox/node_modules/node-red/nodes/core/core/80-function.js"
+    },
+>>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
     "template": {
      "name": "template",
      "types": [
@@ -944,6 +956,7 @@
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-ubidots/ubidots.js"
     }
    }
+<<<<<<< HEAD
   },
   "ttb-node-function": {
    "name": "ttb-node-function",
@@ -974,6 +987,8 @@
      "file": "/root/userdir/node_modules/ttb-node-owntracks/owntracks.js"
     }
    }
+=======
+>>>>>>> 4f33415f5b1f97d122d69f07b7c5c8c6ec301919
   }
  }
 }
