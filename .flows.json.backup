@@ -253,38 +253,32 @@
         ]
     },
     {
-        "id": "331bc913.52580e",
-        "type": "inject",
+        "id": "26d36389.fe89bc",
+        "type": "info",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 177,
-        "y": 320,
+        "info": "",
+        "icon": "comment.png",
+        "langs": [
+            {
+                "key": "en-US",
+                "title": "",
+                "body": "",
+                "isDefault": true
+            }
+        ],
+        "x": 770,
+        "y": 40,
         "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "8c6ad612.0a64b"
-            ]
-        ]
+        "wires": []
     },
     {
-        "id": "8c6ad612.0a64b",
-        "type": "function",
+        "id": "a9142e1b.372748",
+        "type": "comment",
         "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 350,
-        "y": 320,
+        "info": "",
+        "x": 950,
+        "y": 40,
         "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "1483f35e.717c5d"
-            ]
-        ]
+        "wires": []
     }
 ]
