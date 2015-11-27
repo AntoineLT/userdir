@@ -251,5 +251,22 @@
                 "1483f35e.717c5d"
             ]
         ]
+    },
+    {
+        "id": "b4915a0d.6ffd28",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 1136,
+        "y": 140,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            []
+        ]
     }
 ]
