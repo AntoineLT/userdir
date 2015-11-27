@@ -45,6 +45,14 @@
         "type": "commentdown",
         "name": "Clic below and look the result into the display tab",
         "info": "",
+        "langs": [
+            {
+                "key": "en-US",
+                "title": "Clic below and look the result into the display tab",
+                "body": "",
+                "isDefault": true
+            }
+        ],
         "x": 257,
         "y": 69,
         "z": "c3aed0d3.3ce58",
@@ -250,6 +258,23 @@
             [
                 "1483f35e.717c5d"
             ]
+        ]
+    },
+    {
+        "id": "c79335cb.cab82",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 684,
+        "y": 119,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            []
         ]
     }
 ]
