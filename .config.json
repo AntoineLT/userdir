@@ -959,6 +959,21 @@
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-function/80-function.js"
     }
    }
+  },
+  "ttb-node-owntracks": {
+   "name": "ttb-node-owntracks",
+   "version": "0.0.4",
+   "nodes": {
+    "owntracks": {
+     "name": "owntracks",
+     "types": [
+      "owntracks"
+     ],
+     "enabled": true,
+     "module": "ttb-node-owntracks",
+     "file": "/root/userdir/node_modules/ttb-node-owntracks/owntracks.js"
+    }
+   }
   }
  }
 }

@@ -5,6 +5,11 @@
         "label": "Flow"
     },
     {
+        "type": "tab",
+        "id": "9466d32b.ee9b18",
+        "label": "Flow 2"
+    },
+    {
         "id": "MQTT.Localhost",
         "type": "mqtt-broker",
         "broker": "localhost",
@@ -28,21 +33,6 @@
         "wires": [
             [
                 "91e81f96.ce0568"
-            ]
-        ]
-    },
-    {
-        "id": "91e81f96.ce0568",
-        "type": "set",
-        "property": "payload",
-        "value": "Hello world!",
-        "name": "",
-        "x": 316,
-        "y": 170,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "1483f35e.717c5d"
             ]
         ]
     },
@@ -251,5 +241,67 @@
                 "ebcf38a3.6bde48"
             ]
         ]
+    },
+    {
+        "id": "91e81f96.ce0568",
+        "type": "set",
+        "property": "payload",
+        "value": "Hello world!",
+        "name": "",
+        "x": 325,
+        "y": 180,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "1483f35e.717c5d"
+            ]
+        ]
+    },
+    {
+        "id": "fd756db3.729c",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 302,
+        "y": 123,
+        "z": "9466d32b.ee9b18",
+        "wires": [
+            [
+                "69822e6c.b0b9a"
+            ]
+        ]
+    },
+    {
+        "id": "69822e6c.b0b9a",
+        "type": "function",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 486,
+        "y": 133,
+        "z": "9466d32b.ee9b18",
+        "wires": [
+            [
+                "10bde507.c20f93"
+            ]
+        ]
+    },
+    {
+        "id": "10bde507.c20f93",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 688.5,
+        "y": 160,
+        "z": "9466d32b.ee9b18",
+        "wires": []
     }
 ]

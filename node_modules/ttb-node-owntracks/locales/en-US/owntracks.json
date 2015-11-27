@@ -1,0 +1,28 @@
+{
+    "owntracks": {
+        "basic": "Basic",
+        "advanced": "Advanced",
+        "topic": {
+            "label": "Topic",
+            "value": "owntracks/position"
+        },
+        "name": "Name",
+        "broker": {
+            "label": "Broker",
+            "url": "test.mosquitto.org",
+            "port": {
+                "label": "Port",
+                "num": "1883"
+            }
+        },
+        "client": {
+            "id": "Client ID",
+            "msg": "Leave blank for auto generated"
+        },
+        "username": "Username",
+        "password": {
+            "label": "Password",
+            "placeholder": "Password"
+        }
+    }
+}

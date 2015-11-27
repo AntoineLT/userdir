@@ -1,0 +1,91 @@
+<!--
+	Copyright (c) 2015 Digital Airways (www.DigitalAirways.com)
+	This work is free. You can redistribute it and/or modify it under the
+	terms of the "Do What The Fuck You Want To" Public License, Version 2,
+	as published by Sam Hocevar. 
+	See http://www.wtfpl.net for more details.
+-->
+
+<script type="text/x-red" data-template-name="owntracks">
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Basic</a></li>
+		<li><a href="#tabs-2">Advanced</a></li>
+	</ul>
+	<div id="tabs-1">
+		<br>
+		<div class="form-row">
+			<label for="node-input-topic"><i class="icon-tasks"></i> <span data-i18n="owntracks.topic.label"></span></label>
+			<input type="text" id="node-input-topic" data-i18n="[value]owntracks.topic.value">
+		</div>
+		<div class="form-row">
+			<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+			<input type="text" id="node-input-name" data-i18n="[placeholder]owntracks.name">
+		</div>
+	</div>
+	<div id="tabs-2">
+		<br>
+		<div class="form-row node-input-broker">
+			<label for="node-input-broker"><i class="icon-bookmark"></i> <span data-i18n="owntracks.broker.label"></label>
+			<input class="input-append-left" type="text" id="node-input-broker" data-i18n="[value]owntracks.broker.url" style="width: 40%;" >
+			<label for="node-input-port" style="margin-left: 10px; width: 35px; "> <span data-i18n="owntracks.broker.port.label"></label>
+			<input type="text" id="node-input-port" data-i18n="[value]owntracks.broker.port.num" style="width:45px">
+		</div>
+		<div class="form-row">
+			<label for="node-input-clientid"><i class="icon-tag"></i> <span data-i18n="owntracks.client.id"></label>
+			<input type="text" id="node-input-clientid" placeholder="Leave blank for auto generated">
+		</div>
+		<div class="form-row">
+			<label for="node-input-user"><i class="icon-user"></i> <span data-i18n="owntracks.username"></label>
+			<input type="text" id="node-input-user" data-i18n="[placeholder]owntracks.username">
+		</div>
+		<div class="form-row">
+			<label for="node-input-pass"><i class="icon-lock"></i> <span data-i18n="owntracks.password.label"></label>
+			<input type="password" id="node-input-pass" data-i18n="[placeholder]owntracks.password.placeholder">
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+</script>
+</script>
+
+<script type="text/x-red" data-help-name="owntracks">
+	<p>Receive coordinates from owntracks application</p>
+    
+	<h2>Owntracks</h2>
+    
+	<p><b>Node description :</b><br/>Receive owntracks coordinates from mqtt
+    and send it as object in 
+    <a href="http://schema.org/GeoCoordinates" target="_blank">
+        http://schema.org/GeoCoordinates
+    </a>
+    format.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('owntracks',{
+        category: 'input',
+		color:"#5C98FF",
+        defaults: {
+            name: {value:""},
+            topic: {value:"", required:true},
+            broker: {value:"", required:true},
+            port: {value:1883, required:true, validate:RED.validators.number()},
+            clientid: {value:""},
+			user: {value:""},
+			pass: {value:""}
+        },
+        inputs:0,
+        outputs:1,
+        icon: "owntracks.png",
+        label: function() {
+            return this.name||this.topic||"owntracks";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

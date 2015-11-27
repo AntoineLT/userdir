@@ -1,0 +1,28 @@
+{
+    "owntracks": {
+        "basic": "Basique",
+        "advanced": "Avancé",
+        "topic": {
+            "label": "Sujet",
+            "value": "owntracks/position"
+        },
+        "name": "Nom",
+        "broker": {
+            "label": "Broker",
+            "url": "test.mosquitto.org",
+            "port": {
+                "label": "Port",
+                "num": "1883"
+            }
+        },
+        "client": {
+            "id": "ID client",
+            "msg": "Laisser vide pour une génération auto"
+        },
+        "username": "Utilisateur",
+        "password": {
+            "label": "Password",
+            "placeholder": "Mot de passe"
+        }
+    }
+}
