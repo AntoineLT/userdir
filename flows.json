@@ -299,7 +299,7 @@
     {
         "id": "8116fcd.35ca48",
         "type": "display",
-        "active": true,
+        "active": false,
         "x": 550.5,
         "y": 300,
         "z": "c3aed0d3.3ce58",
