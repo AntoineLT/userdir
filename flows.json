@@ -117,7 +117,7 @@
     {
         "id": "381b0243.1e67de",
         "type": "exec",
-        "command": "cd /root/userdir; git remote",
+        "command": "cd /root/userdir; git log --pretty=format:'%s'",
         "addpay": false,
         "append": "",
         "useSpawn": "",
@@ -127,7 +127,7 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "17beb4ff.a26053"
+                "c6081205.4d8d28"
             ],
             [
                 "a1ac769f.ac0e68"
@@ -136,18 +136,6 @@
                 "6e9dc3f.548803c"
             ]
         ]
-    },
-    {
-        "id": "17beb4ff.a26053",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 748.5,
-        "y": 460,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
     },
     {
         "id": "a1ac769f.ac0e68",
@@ -261,20 +249,31 @@
         ]
     },
     {
-        "id": "c79335cb.cab82",
-        "type": "inject",
+        "id": "c6081205.4d8d28",
+        "type": "function",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 684,
-        "y": 119,
+        "func": "msg.payload = msg.payload.split(\"\\n\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 460,
         "z": "c3aed0d3.3ce58",
         "wires": [
-            []
+            [
+                "969aba92.efc7e"
+            ]
         ]
+    },
+    {
+        "id": "969aba92.efc7e",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 948.5,
+        "y": 460,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
     }
 ]
