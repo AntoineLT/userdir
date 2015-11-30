@@ -249,23 +249,6 @@
         ]
     },
     {
-        "id": "c79335cb.cab82",
-        "type": "inject",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 684,
-        "y": 119,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c6081205.4d8d28",
         "type": "function",
         "name": "",
@@ -277,7 +260,8 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "969aba92.efc7e"
+                "969aba92.efc7e",
+                "3370c949.ff0436"
             ]
         ]
     },
@@ -290,6 +274,62 @@
         "complete": "false",
         "x": 948.5,
         "y": 460,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "9c9e10ae.8adcc8",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 172.5,
+        "y": 300,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "dc4181a5.076538"
+            ]
+        ]
+    },
+    {
+        "id": "8116fcd.35ca48",
+        "type": "display",
+        "active": true,
+        "x": 550.5,
+        "y": 300,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "dc4181a5.076538",
+        "type": "set",
+        "property": "payload",
+        "value": "Hello world!",
+        "name": "",
+        "x": 345,
+        "y": 300,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "8116fcd.35ca48"
+            ]
+        ]
+    },
+    {
+        "id": "3370c949.ff0436",
+        "type": "file",
+        "name": "",
+        "filename": "/root/test.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 930,
+        "y": 420,
         "z": "c3aed0d3.3ce58",
         "wires": []
     }
