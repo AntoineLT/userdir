@@ -486,5 +486,22 @@
                 "c419d219.06e51"
             ]
         ]
+    },
+    {
+        "id": "79b7e2b7.8e030c",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 939,
+        "y": 124,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            []
+        ]
     }
 ]
