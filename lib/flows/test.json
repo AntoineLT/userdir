@@ -1,0 +1,57 @@
+[
+    {
+        "id": "339c286a.a5f248",
+        "type": "go",
+        "name": "",
+        "x": 110,
+        "y": 80,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "91e81f96.ce0568"
+            ]
+        ]
+    },
+    {
+        "id": "1483f35e.717c5d",
+        "type": "display",
+        "active": true,
+        "x": 490.5,
+        "y": 80,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "97d51a50.1542d8",
+        "type": "commentdown",
+        "name": "Clic below and look the result into the display tab",
+        "info": "",
+        "langs": [
+            {
+                "key": "en-US",
+                "title": "Clic below and look the result into the display tab",
+                "body": "",
+                "isDefault": true
+            }
+        ],
+        "x": 218.5,
+        "y": 40,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "91e81f96.ce0568",
+        "type": "set",
+        "property": "payload",
+        "value": "Hello world!",
+        "name": "",
+        "x": 305,
+        "y": 80,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "1483f35e.717c5d"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,120 @@
+    {
+        "id": "7710d7ea.6624e",
+        "type": "http in",
+        "name": "",
+        "url": "/form/lang",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 124,
+        "y": 3240,
+        "z": "system",
+        "wires": [
+            [
+                "4e07ec23.20be1c"
+            ]
+        ]
+    },
+    {
+        "id": "3d11c945.6bd436",
+        "type": "http response",
+        "name": "",
+        "x": 850,
+        "y": 3240,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "63b2e98e.87b078",
+        "type": "file ejs",
+        "name": "Lang",
+        "filename": "/root/thethingbox/node_modules/node-red/flow/lang.ejs",
+        "reloadfile": true,
+        "x": 654.5,
+        "y": 3240,
+        "z": "system",
+        "wires": [
+            [
+                "3d11c945.6bd436"
+            ]
+        ]
+    },
+    {
+        "id": "33d87310.be48ac",
+        "type": "comment",
+        "name": "Language of the interface",
+        "info": "",
+        "x": 146.5,
+        "y": 3200,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "7ea0493.5610fb8",
+        "type": "http in",
+        "name": "",
+        "url": "/handle/lang",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 131.5,
+        "y": 3280,
+        "z": "system",
+        "wires": [
+            [
+                "994f999b.7816e",
+                "f0fd547a.db4b4"
+            ]
+        ]
+    },
+    {
+        "id": "7b7125e.3cd645c",
+        "type": "http response",
+        "name": "",
+        "x": 651,
+        "y": 3280,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "994f999b.7816e",
+        "type": "ejs",
+        "name": "",
+        "ejs": "Request submitted.",
+        "x": 411,
+        "y": 3280,
+        "z": "system",
+        "wires": [
+            [
+                "7b7125e.3cd645c"
+            ]
+        ]
+    },
+    {
+        "id": "f0fd547a.db4b4",
+        "type": "function",
+        "name": "parse query",
+        "func": "context.global.settings.lang =  msg.payload.languages;\ncontext.global.settingslib.writeSettings(context.global.settings);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430.5,
+        "y": 3321,
+        "z": "system",
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e07ec23.20be1c",
+        "type": "function",
+        "name": "check.lang",
+        "func": "if(typeof context.global.settings.lang === \"undefined\") {\n    msg.payload = \"auto\";\n} else {\n    msg.payload = context.global.settings.lang;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 422.5,
+        "y": 3240,
+        "z": "system",
+        "wires": [
+            [
+                "63b2e98e.87b078"
+            ]
+        ]
+    }

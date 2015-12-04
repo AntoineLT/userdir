@@ -22,8 +22,8 @@
         "id": "339c286a.a5f248",
         "type": "go",
         "name": "",
-        "x": 154,
-        "y": 108,
+        "x": 110,
+        "y": 80,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
@@ -35,8 +35,8 @@
         "id": "1483f35e.717c5d",
         "type": "display",
         "active": true,
-        "x": 495,
-        "y": 233,
+        "x": 490.5,
+        "y": 80,
         "z": "c3aed0d3.3ce58",
         "wires": []
     },
@@ -53,8 +53,8 @@
                 "isDefault": true
             }
         ],
-        "x": 257,
-        "y": 69,
+        "x": 218.5,
+        "y": 40,
         "z": "c3aed0d3.3ce58",
         "wires": []
     },
@@ -110,7 +110,7 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "381b0243.1e67de"
+                "ec99df0e.2883b8"
             ]
         ]
     },
@@ -164,7 +164,7 @@
     {
         "id": "ebcf38a3.6bde48",
         "type": "exec",
-        "command": "env",
+        "command": "ls",
         "addpay": true,
         "append": "",
         "useSpawn": "",
@@ -174,51 +174,15 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "d5d9d59a.b2dbf8"
+                "ff8cf508.01535"
             ],
             [
-                "6fcfbd4e.032364"
+                "964c0136.9e0388"
             ],
             [
-                "e6dc33e2.eea0d"
+                "390c75ec.4dbec2"
             ]
         ]
-    },
-    {
-        "id": "d5d9d59a.b2dbf8",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 508.5,
-        "y": 560,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "6fcfbd4e.032364",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 508.5,
-        "y": 600,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "e6dc33e2.eea0d",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 508.5,
-        "y": 640,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
     },
     {
         "id": "2b6ed767.be63f",
@@ -239,8 +203,8 @@
         "property": "payload",
         "value": "Hello world!",
         "name": "",
-        "x": 325,
-        "y": 180,
+        "x": 305,
+        "y": 80,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
@@ -260,8 +224,7 @@
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "969aba92.efc7e",
-                "3370c949.ff0436"
+                "969aba92.efc7e"
             ]
         ]
     },
@@ -278,41 +241,22 @@
         "wires": []
     },
     {
-        "id": "9c9e10ae.8adcc8",
-        "type": "inject",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 172.5,
-        "y": 300,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "dc4181a5.076538"
-            ]
-        ]
-    },
-    {
         "id": "8116fcd.35ca48",
         "type": "display",
         "active": true,
-        "x": 550.5,
-        "y": 300,
+        "x": 490.5,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": []
     },
     {
-        "id": "dc4181a5.076538",
-        "type": "set",
-        "property": "payload",
-        "value": "Hello world!",
+        "id": "75daf96b.3b3e9",
+        "type": "sms-out",
+        "text": "Tu flippes ?",
+        "to": "+33601018708",
         "name": "",
-        "x": 345,
-        "y": 300,
+        "x": 298.5,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
@@ -321,16 +265,226 @@
         ]
     },
     {
-        "id": "3370c949.ff0436",
-        "type": "file",
+        "id": "aa975090.38553",
+        "type": "go",
         "name": "",
-        "filename": "/root/test.json",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "x": 930,
+        "x": 110,
+        "y": 140,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "75daf96b.3b3e9"
+            ]
+        ]
+    },
+    {
+        "id": "29111549.2a7292",
+        "type": "go",
+        "name": "",
+        "x": 110,
+        "y": 200,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "a6dda7bc.139c88"
+            ]
+        ]
+    },
+    {
+        "id": "a6dda7bc.139c88",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = JSON.stringify({\n    \"url\": \"http://mythingbox.io/api/V2/MessageBird/receive\"\n});\nmsg.url = \"http:///api/cloud\";\nmsg.method = \"GET\";\nmsg.headers = {};\nmsg.headers['content-type'] = \"application/json\";\nmsg.headers['content-length'] = Buffer.byteLength(payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 200,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "2b54c1d4.092486"
+            ]
+        ]
+    },
+    {
+        "id": "2b54c1d4.092486",
+        "type": "http request",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "url": "",
+        "x": 506.5,
+        "y": 200,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "b43cf1b6.ea06a"
+            ]
+        ]
+    },
+    {
+        "id": "b43cf1b6.ea06a",
+        "type": "display",
+        "active": true,
+        "x": 690.5,
+        "y": 200,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "387ff570.29e622",
+        "type": "function",
+        "name": "",
+        "func": "if(msg.error){\n    msg.payload = \"error\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 670,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "e6ed2c7c.934af"
+            ]
+        ]
+    },
+    {
+        "id": "e6ed2c7c.934af",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 848.5,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "964c0136.9e0388",
+        "type": "function",
+        "name": "",
+        "func": "msg.stderr = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 600,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "387ff570.29e622"
+            ]
+        ]
+    },
+    {
+        "id": "390c75ec.4dbec2",
+        "type": "function",
+        "name": "",
+        "func": "msg.error = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 640,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "387ff570.29e622"
+            ]
+        ]
+    },
+    {
+        "id": "ff8cf508.01535",
+        "type": "function",
+        "name": "",
+        "func": "msg.stdout = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 560,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "387ff570.29e622"
+            ]
+        ]
+    },
+    {
+        "id": "3fed90da.476828",
+        "type": "go",
+        "name": "",
+        "x": 110,
+        "y": 260,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "b1d96a4b.683c88"
+            ]
+        ]
+    },
+    {
+        "id": "b1d96a4b.683c88",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = (typeof context.global.settings.lang);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 260,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "67777dc2.3607a4"
+            ]
+        ]
+    },
+    {
+        "id": "67777dc2.3607a4",
+        "type": "display",
+        "active": true,
+        "x": 490.5,
+        "y": 260,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "c419d219.06e51",
+        "type": "git",
+        "command": "cd /root/userdir; ",
+        "name": "",
+        "x": 470,
+        "y": 420,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "a1f14d97.93d49"
+            ]
+        ]
+    },
+    {
+        "id": "a1f14d97.93d49",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 670,
         "y": 420,
         "z": "c3aed0d3.3ce58",
         "wires": []
+    },
+    {
+        "id": "ec99df0e.2883b8",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = \"git add -A; git remote set-url origin 'https://antoinelt:24069216Git@github.com/AntoineLT/userdir.git'\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 420,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "c419d219.06e51"
+            ]
+        ]
     }
 ]
