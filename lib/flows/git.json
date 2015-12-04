@@ -1,0 +1,455 @@
+[
+    {
+        "id": "daf4eae.b7df798",
+        "type": "http in",
+        "name": "",
+        "url": "/form/git",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 118,
+        "y": 4180,
+        "z": "system",
+        "wires": [
+            [
+                "33ca7408.643e14"
+            ]
+        ]
+    },
+    {
+        "id": "181b8182.d3c5de",
+        "type": "http response",
+        "name": "",
+        "x": 730,
+        "y": 4180,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "77fce13e.12513",
+        "type": "file ejs",
+        "name": "Git",
+        "filename": "/root/thethingbox/node_modules/node-red/flow/git.ejs",
+        "reloadfile": true,
+        "x": 530,
+        "y": 4180,
+        "z": "system",
+        "wires": [
+            [
+                "181b8182.d3c5de"
+            ]
+        ]
+    },
+    {
+        "id": "7e8b55fa.2ccc6c",
+        "type": "commentdown",
+        "name": "Git form",
+        "info": "",
+        "langs": [
+            {
+                "key": "en-US",
+                "title": "Git form",
+                "body": "",
+                "isDefault": true
+            }
+        ],
+        "x": 90,
+        "y": 4140,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "173e4f32.5b1339",
+        "type": "http in",
+        "name": "",
+        "url": "/form/git-valid",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 138.5,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "f400b07a.7d6e68"
+            ]
+        ]
+    },
+    {
+        "id": "e203e6fc.96a978",
+        "type": "exec",
+        "command": "cd /root/userdir; ls -a",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": ".git",
+        "x": 730,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "97c4ebcf.2fcae8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "97c4ebcf.2fcae8",
+        "type": "function",
+        "name": "",
+        "func": "var now = new Date();\nif(msg.payload.search(\".git\") !== -1){\n    msg.command = \"git add -A\"; \n} else {\n    msg.command = \"git init ; git add .\";\n}\nmsg.payload = \"git remote\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 890,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "28e13e64.1ddc62"
+            ]
+        ]
+    },
+    {
+        "id": "76f6aa9f.0dde84",
+        "type": "function",
+        "name": "",
+        "func": "if(msg.payload !== \"\" && msg.payload.search(\"origin\") !== -1) {\n    msg.remote  = \"git remote set-url origin '\"+msg.datas.remoteURL+\"'\";\n} else {\n    msg.remote  = \"git remote add origin '\"+msg.datas.remoteURL+\"'\";\n}\nmsg.payload = msg.command+\"; \"+msg.remote;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 890,
+        "y": 4280,
+        "z": "system",
+        "wires": [
+            [
+                "c531e46d.6ef6a"
+            ]
+        ]
+    },
+    {
+        "id": "758d9658.8d3a98",
+        "type": "http in",
+        "name": "",
+        "url": "/form/ssh-pub",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 136,
+        "y": 4300,
+        "z": "system",
+        "wires": [
+            [
+                "9197bd8.2202e4"
+            ]
+        ]
+    },
+    {
+        "id": "9197bd8.2202e4",
+        "type": "exec",
+        "command": "cat /root/certs/git_rsa.pub",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "git_rsa.pub",
+        "x": 344,
+        "y": 4300,
+        "z": "system",
+        "wires": [
+            [
+                "fa0d824a.992"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fa0d824a.992",
+        "type": "http response",
+        "name": "",
+        "x": 530,
+        "y": 4300,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "f28f47d4.8c75e8",
+        "type": "change",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "datas",
+                "to": "msg.payload"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 552.5,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "e203e6fc.96a978"
+            ]
+        ]
+    },
+    {
+        "id": "44071568.807a94",
+        "type": "http response",
+        "name": "",
+        "x": 1330,
+        "y": 4280,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "33ca7408.643e14",
+        "type": "function",
+        "name": "check.checkox",
+        "func": "if(context.global.settings.gitssh ===  true){\n    msg.payload =  true;\n}\nelse {\n    msg.payload =  false;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 354.5,
+        "y": 4180,
+        "z": "system",
+        "wires": [
+            [
+                "77fce13e.12513"
+            ]
+        ]
+    },
+    {
+        "id": "f400b07a.7d6e68",
+        "type": "function",
+        "name": "parse query",
+        "func": "if(msg.payload.method === \"ssh\"){\n    context.global.settings.gitssh =  true;\n}\nelse {\n    context.global.settings.gitssh =  false;\n}\ncontext.global.settingslib.writeSettings(context.global.settings);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 346.5,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "f28f47d4.8c75e8"
+            ]
+        ]
+    },
+    {
+        "id": "6392f88b.aca32",
+        "type": "function",
+        "name": "",
+        "func": "var now = String(new Date()),\n    mes = \"\";\nnow = now.split(' GMT')[0];\nif(msg.payload.message !== \"\") {\n    mes = \" - \"+msg.payload.message;\n}\nmsg.add     = \"git add -A\"; \nmsg.commit  = \"git commit -a -m '\"+now+mes+\"'\"; \nmsg.push    = \"git push origin master\";\nmsg.payload = msg.add+\"; \"+msg.commit+\"; \"+msg.push;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 4360,
+        "z": "system",
+        "wires": [
+            [
+                "4095e4ac.45dc7c"
+            ]
+        ]
+    },
+    {
+        "id": "a9b0c3d9.c723b8",
+        "type": "function",
+        "name": "",
+        "func": "var now  = new Date();\nmsg.stash   = \"\";//git stash save --keep-index\";\nmsg.pull    = \"git pull origin master;\";\nmsg.payload = msg.clean+\"; \"+msg.pull;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 4400,
+        "z": "system",
+        "wires": [
+            [
+                "4095e4ac.45dc7c"
+            ]
+        ]
+    },
+    {
+        "id": "e3d3c082.711568",
+        "type": "http in",
+        "name": "",
+        "url": "/pull-push",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 127,
+        "y": 4360,
+        "z": "system",
+        "wires": [
+            [
+                "6392f88b.aca32"
+            ]
+        ]
+    },
+    {
+        "id": "5ba7b2d2.8f009c",
+        "type": "http in",
+        "name": "",
+        "url": "/update",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 4400,
+        "z": "system",
+        "wires": [
+            [
+                "a9b0c3d9.c723b8"
+            ]
+        ]
+    },
+    {
+        "id": "cd1928be.134fe",
+        "type": "http in",
+        "name": "",
+        "url": "/checkout",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 126.5,
+        "y": 4440,
+        "z": "system",
+        "wires": [
+            [
+                "34c9c2ee.c33c66"
+            ]
+        ]
+    },
+    {
+        "id": "34c9c2ee.c33c66",
+        "type": "function",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 4440,
+        "z": "system",
+        "wires": [
+            [
+                "4095e4ac.45dc7c"
+            ]
+        ]
+    },
+    {
+        "id": "28e13e64.1ddc62",
+        "type": "git",
+        "command": "cd /root/userdir;",
+        "name": "git remote",
+        "x": 1060,
+        "y": 4240,
+        "z": "system",
+        "wires": [
+            [
+                "76f6aa9f.0dde84"
+            ]
+        ]
+    },
+    {
+        "id": "c531e46d.6ef6a",
+        "type": "git",
+        "command": "cd /root/userdir;",
+        "name": "",
+        "x": 1050,
+        "y": 4280,
+        "z": "system",
+        "wires": [
+            [
+                "56099bad.227da4"
+            ]
+        ]
+    },
+    {
+        "id": "4095e4ac.45dc7c",
+        "type": "git",
+        "command": "cd /root/userdir;",
+        "name": "",
+        "x": 530,
+        "y": 4400,
+        "z": "system",
+        "wires": [
+            [
+                "e2d03072.d1ee88",
+                "9ff25c69.035bf8",
+                "ec5c7094.cbf55",
+                "e4ff4d74.fc5cd8"
+            ]
+        ]
+    },
+    {
+        "id": "e2d03072.d1ee88",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "stdout",
+        "x": 743,
+        "y": 4440,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "9ff25c69.035bf8",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "stderr",
+        "x": 742,
+        "y": 4480,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "e4ff4d74.fc5cd8",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "error",
+        "x": 739,
+        "y": 4520,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "56099bad.227da4",
+        "type": "function",
+        "name": "",
+        "func": "if(msg.error !== null && typeof msg.error !== \"undefined\"){\n    msg.statusCode = 400;\n} else {\n    msg.statusCode = 200;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1190,
+        "y": 4280,
+        "z": "system",
+        "wires": [
+            [
+                "44071568.807a94"
+            ]
+        ]
+    },
+    {
+        "id": "c1c4809e.2a93c",
+        "type": "http response",
+        "name": "",
+        "x": 870,
+        "y": 4400,
+        "z": "system",
+        "wires": []
+    },
+    {
+        "id": "ec5c7094.cbf55",
+        "type": "function",
+        "name": "",
+        "func": "if(msg.error !== null && typeof msg.error !== \"undefined\"){\n    msg.statusCode = 400;\n} else {\n    switch(msg.stderr){\n        case \"Everything up-to-date\":\n            msg.statusCode = 304;\n            break;\n        \n        default:\n            msg.statusCode = 200;\n            break;\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 4400,
+        "z": "system",
+        "wires": [
+            [
+                "c1c4809e.2a93c"
+            ]
+        ]
+    }
+]
