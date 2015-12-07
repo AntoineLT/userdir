@@ -434,7 +434,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/ttb-info.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/ttb-info.js"
     },
     "commentdown": {
      "name": "commentdown",
@@ -443,7 +443,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/commentdown.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/commentdown.js"
     },
     "commentup": {
      "name": "commentup",
@@ -452,7 +452,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/commentup.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/commentup.js"
     }
    }
   },
@@ -987,6 +987,21 @@
      "enabled": true,
      "module": "ttb-node-git",
      "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-git/git.js"
+    }
+   }
+  },
+  "sms": {
+   "name": "sms",
+   "version": "0.0.0",
+   "nodes": {
+    "sms": {
+     "name": "sms",
+     "types": [
+      "sms-out"
+     ],
+     "enabled": true,
+     "module": "sms",
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-sms/sms.js"
     }
    }
   }
