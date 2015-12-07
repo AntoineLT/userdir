@@ -145,7 +145,7 @@
         "id": "ec99df0e.2883b8",
         "type": "function",
         "name": "",
-        "func": "msg.payload = \"git add -A; git remote set-url origin 'https://antoinelt:24069216Git@github.com/AntoineLT/userdir.git'\";\nreturn msg;",
+        "func": "msg.payload = \"git ls-remote\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 290,

@@ -55,61 +55,14 @@
         "id": "a0d55ea2.2aeb38",
         "type": "go",
         "name": "",
-        "x": 170,
-        "y": 500,
+        "x": 110,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
                 "ec99df0e.2883b8"
             ]
         ]
-    },
-    {
-        "id": "381b0243.1e67de",
-        "type": "exec",
-        "command": "cd /root/userdir; git log --pretty=format:'%s'",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "name": "cd /root/userdir; git ls-remote --exit-code github",
-        "x": 436.5,
-        "y": 500,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "c6081205.4d8d28"
-            ],
-            [
-                "a1ac769f.ac0e68"
-            ],
-            [
-                "6e9dc3f.548803c"
-            ]
-        ]
-    },
-    {
-        "id": "a1ac769f.ac0e68",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 748.5,
-        "y": 500,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "6e9dc3f.548803c",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 748.5,
-        "y": 540,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
     },
     {
         "id": "ebcf38a3.6bde48",
@@ -119,18 +72,18 @@
         "append": "",
         "useSpawn": "",
         "name": "",
-        "x": 310,
-        "y": 600,
+        "x": 290,
+        "y": 240,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
-                "ff8cf508.01535"
+                "c9778a91.b750d8"
             ],
             [
-                "964c0136.9e0388"
+                "4cf0f1f9.92f538"
             ],
             [
-                "390c75ec.4dbec2"
+                "dbbc739d.d42ae8"
             ]
         ]
     },
@@ -138,8 +91,8 @@
         "id": "2b6ed767.be63f",
         "type": "go",
         "name": "",
-        "x": 170,
-        "y": 600,
+        "x": 110,
+        "y": 240,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
@@ -163,116 +116,12 @@
         ]
     },
     {
-        "id": "c6081205.4d8d28",
-        "type": "function",
-        "name": "",
-        "func": "msg.payload = msg.payload.split(\"\\n\");\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 730,
-        "y": 460,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "969aba92.efc7e"
-            ]
-        ]
-    },
-    {
-        "id": "969aba92.efc7e",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 948.5,
-        "y": 460,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "387ff570.29e622",
-        "type": "function",
-        "name": "",
-        "func": "if(msg.error){\n    msg.payload = \"error\";\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 670,
-        "y": 600,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "e6ed2c7c.934af"
-            ]
-        ]
-    },
-    {
-        "id": "e6ed2c7c.934af",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 848.5,
-        "y": 600,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "964c0136.9e0388",
-        "type": "function",
-        "name": "",
-        "func": "msg.stderr = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 600,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "387ff570.29e622"
-            ]
-        ]
-    },
-    {
-        "id": "390c75ec.4dbec2",
-        "type": "function",
-        "name": "",
-        "func": "msg.error = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 640,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "387ff570.29e622"
-            ]
-        ]
-    },
-    {
-        "id": "ff8cf508.01535",
-        "type": "function",
-        "name": "",
-        "func": "msg.stdout = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 560,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "387ff570.29e622"
-            ]
-        ]
-    },
-    {
         "id": "c419d219.06e51",
         "type": "git",
         "command": "cd /root/userdir; ",
         "name": "",
-        "x": 470,
-        "y": 420,
+        "x": 490,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
@@ -288,7 +137,7 @@
         "console": "false",
         "complete": "true",
         "x": 670,
-        "y": 420,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": []
     },
@@ -296,16 +145,52 @@
         "id": "ec99df0e.2883b8",
         "type": "function",
         "name": "",
-        "func": "msg.payload = \"git add -A; git remote set-url origin 'https://antoinelt:24069216Git@github.com/AntoineLT/userdir.git'\";\nreturn msg;",
+        "func": "msg.payload = \"git ls-remote\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 310,
-        "y": 420,
+        "x": 290,
+        "y": 140,
         "z": "c3aed0d3.3ce58",
         "wires": [
             [
                 "c419d219.06e51"
             ]
         ]
+    },
+    {
+        "id": "4cf0f1f9.92f538",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 240,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "dbbc739d.d42ae8",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 280,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "c9778a91.b750d8",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 508.5,
+        "y": 200,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
     }
 ]
