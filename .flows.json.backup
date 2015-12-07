@@ -12,13 +12,6 @@
         "clientid": ""
     },
     {
-        "id": "ff302644.dfde2",
-        "type": "mqtt-broker",
-        "broker": "systm",
-        "port": "1883",
-        "clientid": ""
-    },
-    {
         "id": "339c286a.a5f248",
         "type": "go",
         "name": "",
@@ -55,49 +48,6 @@
         ],
         "x": 218.5,
         "y": 40,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
-        "id": "134c0b66.c65b5d",
-        "type": "mqtt in",
-        "name": "",
-        "topic": "68193f100114/temperature/1",
-        "broker": "ff302644.dfde2",
-        "x": 217,
-        "y": 380,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "b42a9981.eff79"
-            ]
-        ]
-    },
-    {
-        "id": "b42a9981.eff79",
-        "type": "function",
-        "name": "",
-        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 380,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "d50cef33.07e648"
-            ]
-        ]
-    },
-    {
-        "id": "d50cef33.07e648",
-        "type": "debug",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 688.5,
-        "y": 380,
         "z": "c3aed0d3.3ce58",
         "wires": []
     },
@@ -241,60 +191,6 @@
         "wires": []
     },
     {
-        "id": "29111549.2a7292",
-        "type": "go",
-        "name": "",
-        "x": 110,
-        "y": 200,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "a6dda7bc.139c88"
-            ]
-        ]
-    },
-    {
-        "id": "a6dda7bc.139c88",
-        "type": "function",
-        "name": "",
-        "func": "msg.payload = JSON.stringify({\n    \"url\": \"http://mythingbox.io/api/V2/MessageBird/receive\"\n});\nmsg.url = \"http:///api/cloud\";\nmsg.method = \"GET\";\nmsg.headers = {};\nmsg.headers['content-type'] = \"application/json\";\nmsg.headers['content-length'] = Buffer.byteLength(payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 290,
-        "y": 200,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "2b54c1d4.092486"
-            ]
-        ]
-    },
-    {
-        "id": "2b54c1d4.092486",
-        "type": "http request",
-        "name": "",
-        "method": "use",
-        "ret": "txt",
-        "url": "",
-        "x": 506.5,
-        "y": 200,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "b43cf1b6.ea06a"
-            ]
-        ]
-    },
-    {
-        "id": "b43cf1b6.ea06a",
-        "type": "display",
-        "active": true,
-        "x": 690.5,
-        "y": 200,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
         "id": "387ff570.29e622",
         "type": "function",
         "name": "",
@@ -371,44 +267,6 @@
         ]
     },
     {
-        "id": "3fed90da.476828",
-        "type": "go",
-        "name": "",
-        "x": 110,
-        "y": 260,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "b1d96a4b.683c88"
-            ]
-        ]
-    },
-    {
-        "id": "b1d96a4b.683c88",
-        "type": "function",
-        "name": "",
-        "func": "msg.payload = (typeof context.global.settings.lang);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 290,
-        "y": 260,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            [
-                "67777dc2.3607a4"
-            ]
-        ]
-    },
-    {
-        "id": "67777dc2.3607a4",
-        "type": "display",
-        "active": true,
-        "x": 490.5,
-        "y": 260,
-        "z": "c3aed0d3.3ce58",
-        "wires": []
-    },
-    {
         "id": "c419d219.06e51",
         "type": "git",
         "command": "cd /root/userdir; ",
@@ -448,23 +306,6 @@
             [
                 "c419d219.06e51"
             ]
-        ]
-    },
-    {
-        "id": "79b7e2b7.8e030c",
-        "type": "inject",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 939,
-        "y": 124,
-        "z": "c3aed0d3.3ce58",
-        "wires": [
-            []
         ]
     }
 ]

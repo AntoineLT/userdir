@@ -1,0 +1,52 @@
+[
+    {
+        "id": "ff302644.dfde2",
+        "type": "mqtt-broker",
+        "broker": "systm",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
+        "id": "134c0b66.c65b5d",
+        "type": "mqtt in",
+        "name": "",
+        "topic": "68193f100114/temperature/1",
+        "broker": "ff302644.dfde2",
+        "x": 217,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "b42a9981.eff79"
+            ]
+        ]
+    },
+    {
+        "id": "b42a9981.eff79",
+        "type": "function",
+        "name": "",
+        "func": "msg.payload = \"La température est de : \"+JSON.parse(msg.payload).value;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "d50cef33.07e648"
+            ]
+        ]
+    },
+    {
+        "id": "d50cef33.07e648",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 688.5,
+        "y": 380,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    }
+]
