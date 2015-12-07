@@ -299,38 +299,6 @@
         ]
     },
     {
-        "id": "cd1928be.134fe",
-        "type": "http in",
-        "name": "",
-        "url": "/checkout",
-        "method": "post",
-        "swaggerDoc": "",
-        "x": 126.5,
-        "y": 4440,
-        "z": "system",
-        "wires": [
-            [
-                "34c9c2ee.c33c66"
-            ]
-        ]
-    },
-    {
-        "id": "34c9c2ee.c33c66",
-        "type": "function",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 330,
-        "y": 4440,
-        "z": "system",
-        "wires": [
-            [
-                "4095e4ac.45dc7c"
-            ]
-        ]
-    },
-    {
         "id": "28e13e64.1ddc62",
         "type": "git",
         "command": "cd /root/userdir;",
