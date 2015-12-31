@@ -1,0 +1,58 @@
+[
+    {
+        "id": "90a8d7f6.13d37",
+        "type": "zwave-out",
+        "name": "ON",
+        "method": "switchon",
+        "nodeid": "3",
+        "level": "",
+        "class": "",
+        "index": "",
+        "value": "",
+        "x": 1010,
+        "y": 260,
+        "z": "zwave",
+        "wires": []
+    },
+    {
+        "id": "387ff562.f8c6c2",
+        "type": "zwave-out",
+        "name": "OFF",
+        "method": "switchoff",
+        "nodeid": "3",
+        "level": "",
+        "class": "",
+        "index": "",
+        "value": "",
+        "x": 1010,
+        "y": 320,
+        "z": "zwave",
+        "wires": []
+    },
+    {
+        "id": "7648148.99830ec",
+        "type": "go",
+        "name": "",
+        "x": 750,
+        "y": 260,
+        "z": "zwave",
+        "wires": [
+            [
+                "90a8d7f6.13d37"
+            ]
+        ]
+    },
+    {
+        "id": "76a2fe8c.dbe58",
+        "type": "go",
+        "name": "",
+        "x": 750,
+        "y": 320,
+        "z": "zwave",
+        "wires": [
+            [
+                "387ff562.f8c6c2"
+            ]
+        ]
+    }
+]

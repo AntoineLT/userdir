@@ -1,0 +1,134 @@
+[
+    {
+        "id": "79cfc68d.b93b78",
+        "type": "zwave-out",
+        "name": "ON",
+        "method": "switchon",
+        "nodeid": "",
+        "level": "",
+        "class": "37",
+        "index": "0",
+        "value": "0",
+        "x": 977,
+        "y": 539,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "33e7b926.126956",
+        "type": "zwave-out",
+        "name": "OFF",
+        "method": "switchoff",
+        "nodeid": "",
+        "level": "",
+        "class": "37",
+        "index": "0",
+        "value": "0",
+        "x": 977,
+        "y": 579,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "c0d9930b.c03ec",
+        "type": "function",
+        "name": "",
+        "func": "var start = \"00:00\",\n    end   = \"07:00\";\n\nif((context.global.luminance < 200) && (msg.payload >= start) || (msg.payload < end)) {\n    if(msg.sensor === 1){\n        return [msg,null];\n    } else {\n        return [null,msg];\n    }\n} else {\n    return [null,msg];\n}",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 837,
+        "y": 559,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "79cfc68d.b93b78"
+            ],
+            [
+                "33e7b926.126956"
+            ]
+        ]
+    },
+    {
+        "id": "caba56e6.4a2ca8",
+        "type": "change",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor",
+                "to": "msg.payload"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 343.5,
+        "y": 559,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "a0438743.14e62"
+            ]
+        ]
+    },
+    {
+        "id": "a0438743.14e62",
+        "type": "timestamp",
+        "name": "",
+        "x": 527.5,
+        "y": 559,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "69e7162d.ef0128"
+            ]
+        ]
+    },
+    {
+        "id": "69e7162d.ef0128",
+        "type": "dateformat",
+        "dayname": false,
+        "date": "no",
+        "hour": "HH:mm",
+        "meridiem": false,
+        "timezone": "Europe/Paris",
+        "x": 689.5,
+        "y": 559,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "c0d9930b.c03ec"
+            ]
+        ]
+    },
+    {
+        "id": "d62beb3e.c907e",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 535.5,
+        "y": 619,
+        "z": "c3aed0d3.3ce58",
+        "wires": []
+    },
+    {
+        "id": "b8ba5780.050b7",
+        "type": "function",
+        "name": "",
+        "func": "context.global.luminance = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 317,
+        "y": 619,
+        "z": "c3aed0d3.3ce58",
+        "wires": [
+            [
+                "d62beb3e.c907e"
+            ]
+        ]
+    }
+]

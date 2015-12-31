@@ -1,0 +1,65 @@
+[
+    {
+        "id": "MQTT.Localhost",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": ""
+    },
+    {
+        "id": "682e2cac.089bdc",
+        "type": "go",
+        "name": "",
+        "x": 90,
+        "y": 320,
+        "z": "zwave",
+        "wires": [
+            [
+                "355119fc.35c556"
+            ]
+        ]
+    },
+    {
+        "id": "355119fc.35c556",
+        "type": "zwave-out",
+        "name": "Wake-up interval",
+        "method": "setvalue",
+        "nodeid": "2",
+        "level": "",
+        "class": "132",
+        "index": "0",
+        "value": "120",
+        "x": 381.5,
+        "y": 320,
+        "z": "zwave",
+        "wires": []
+    },
+    {
+        "id": "af246e2a.bf759",
+        "type": "zwave-in",
+        "name": "Node2 : Wake-Up",
+        "nodeid": 2,
+        "topic": "zwave/2/132/0/",
+        "broker": "MQTT.Localhost",
+        "x": 120,
+        "y": 380,
+        "z": "zwave",
+        "wires": [
+            [
+                "8ef8b97e.8ccb7"
+            ]
+        ]
+    },
+    {
+        "id": "8ef8b97e.8ccb7",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 368.5,
+        "y": 380,
+        "z": "zwave",
+        "wires": []
+    }
+]

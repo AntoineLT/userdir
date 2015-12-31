@@ -253,21 +253,6 @@
     }
    }
   },
-  "ttb-node-owntracks": {
-   "name": "ttb-node-owntracks",
-   "version": "0.0.4",
-   "nodes": {
-    "owntracks": {
-     "name": "owntracks",
-     "types": [
-      "owntracks"
-     ],
-     "enabled": true,
-     "module": "ttb-node-owntracks",
-     "file": "/root/userdir/node_modules/ttb-node-owntracks/owntracks.js"
-    }
-   }
-  },
   "node-red-contrib-splitter": {
    "name": "node-red-contrib-splitter",
    "version": "0.0.16",
@@ -434,7 +419,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/ttb-info.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/ttb-info.js"
     },
     "commentdown": {
      "name": "commentdown",
@@ -443,7 +428,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/commentdown.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/commentdown.js"
     },
     "commentup": {
      "name": "commentup",
@@ -452,7 +437,7 @@
      ],
      "enabled": true,
      "module": "ttb-node-comments",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-comments/commentup.js"
+     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-info/commentup.js"
     }
    }
   },
@@ -990,18 +975,66 @@
     }
    }
   },
-  "sms": {
-   "name": "sms",
-   "version": "0.0.0",
+  "ttb-zwave": {
+   "name": "ttb-zwave",
+   "version": "0.1.4",
    "nodes": {
-    "sms": {
-     "name": "sms",
+    "zwave": {
+     "name": "zwave",
      "types": [
-      "sms-out"
+      "zwave",
+      "zwave-broker",
+      "zwave-in",
+      "zwave-out"
      ],
      "enabled": true,
-     "module": "sms",
-     "file": "/root/thethingbox/node_modules/node-red/node_modules/ttb-node-sms/sms.js"
+     "module": "ttb-zwave",
+     "file": "/root/userdir/node_modules/ttb-zwave/zwave.js"
+    }
+   }
+  },
+  "node-red-contrib-scheduler": {
+   "name": "node-red-contrib-scheduler",
+   "version": "1.0.5",
+   "nodes": {
+    "scheduler": {
+     "name": "scheduler",
+     "types": [
+      "scheduler"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-scheduler",
+     "file": "/root/userdir/node_modules/node-red-contrib-scheduler/scheduler.js"
+    }
+   }
+  },
+  "node-red-contrib-later": {
+   "name": "node-red-contrib-later",
+   "version": "0.0.4",
+   "nodes": {
+    "later": {
+     "name": "later",
+     "types": [
+      "later"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-later",
+     "file": "/root/userdir/node_modules/node-red-contrib-later/later/later.js"
+    }
+   }
+  },
+  "ttb-node-timefilter": {
+   "name": "ttb-node-timefilter",
+   "version": "0.0.1",
+   "nodes": {
+    "timefilter": {
+     "name": "timefilter",
+     "types": [
+      "timefilter"
+     ],
+     "enabled": true,
+     "module": "ttb-node-timefilter",
+     "file": "/root/userdir/node_modules/ttb-node-timefilter/timefilter.js"
     }
    }
   }
